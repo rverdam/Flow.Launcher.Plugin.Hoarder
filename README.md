@@ -10,6 +10,14 @@ You can install this plugin via the FlowLauncher plugin manager with the followi
 pm install Hoarder
 ```
 
+## Configuration
+
+Before you can use this plugin, you will need to configure it with your local Hoarder instance's base URL and API key. You can do this by setting the following two values in the plugin's settings:
+
+- `Hoarder Base Address`: This is the base URL of your local Hoarder instance. For example, if you run Hoarder on http://localhost:8080, then this should be set to `http://localhost:8080`.
+
+- `Hoarder API Key`: This is the API key that allows the plugin to access your Hoarder bookmarks. You can obtain this key from the Hoarder web interface by going to your profile settings > User Settings > API Keys page and clicking on "New API Key".
+
 ## Usage
 
 Once installed, you can activate the Hoarder plugin by using the action keyword `ho`. Simply type `ho` followed by your search query to find matching bookmarks stored in Hoarder.
@@ -32,7 +40,7 @@ ho Python
 
 The plugin provides a context menu option:
 
-- **Hello World Python's Context menu**: Press enter to open the plugin's repository on GitHub.
+- **Copy URL to clipboard**: Copies the URL of the selected item to the clipboard
 
 ## Development
 
