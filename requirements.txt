@@ -1,0 +1,3 @@
+flowlauncher
+pyflowlauncher[all]
+requests

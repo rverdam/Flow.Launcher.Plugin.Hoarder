@@ -1,0 +1,12 @@
+{
+    "ID": "cf3dd749-166c-4cbe-8e85-d8d3f2057119",
+    "ActionKeyword": "ho",
+    "Name": "Hoarder",
+    "Description": "Hoarder Plugin",
+    "Author": "Robert Verdam",
+    "Version": "0.0.1",
+    "Language": "python",
+    "Website": "https://github.com/rverdam/Flow.Launcher.Plugin.Hoarder",
+    "IcoPath": "Images\\app.png",
+    "ExecuteFileName": "run.py"
+}

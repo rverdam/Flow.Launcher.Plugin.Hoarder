@@ -1,0 +1,11 @@
+#$schema: https://www.flowlauncher.com/schemas/settings-template.schema.json
+body:
+  - type: input
+    attributes:
+      name: hoarderBaseAddress
+      label: Hoarder Base Address
+      description: Hoarder Base Url (e.g. https://hoarder.example.com)
+  - type: passwordBox
+    attributes:
+      name: hoarderApiKey
+      label: Hoarder API Key
