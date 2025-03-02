@@ -18,9 +18,3 @@ class HoarderAPI:
             return response.json()['bookmarks']
         else:
             response.raise_for_status()
-
-# Example usage:
-# hoarder_api = HoarderAPI(base_url='https://hoarder.example.com', api_key='YOUR_API_KEY')
-# results = hoarder_api.search_bookmarks('Python')
-# print(results)
-
