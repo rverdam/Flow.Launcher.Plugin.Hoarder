@@ -1,3 +1,2 @@
-flowlauncher
 pyflowlauncher[all]
 requests
