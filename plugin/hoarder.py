@@ -12,7 +12,10 @@ class HoarderAPI:
         endpoint = f'{self.base_url}/api/v1/bookmarks/search'
         params = {'q': query}
         
-        response = requests.get(endpoint, headers=headers, params=params)
+        try:
+            response = requests.get(endpoint, headers=headers, params=params)
+        except requests.exceptions.RequestException as e:
+            raise ConnectionError(e)
         
         if response.status_code == 200:
             return response.json()['bookmarks']

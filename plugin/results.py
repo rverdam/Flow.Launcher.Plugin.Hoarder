@@ -1,14 +1,22 @@
 from pyflowlauncher import Result
 from pyflowlauncher.api import open_url, open_setting_dialog, copy_to_clipboard
-from pyflowlauncher.icons import RECYCLEBIN, SETTINGS, LINK
+from pyflowlauncher.icons import RECYCLEBIN, SETTINGS, LINK, ERROR
 from html import unescape
 
 from plugin.hoarder import HoarderAPI
 
+def error_results(error: str, JsonRPCAction=None):
+    return Result(
+        Title="Hoarder Plugin Error",
+        SubTitle=error,
+        IcoPath=ERROR,
+        JsonRPCAction=JsonRPCAction
+    )
+
 def no_base_url_results():
     return Result(
-        Title="No Hoarder Base Url token found!",
-        SubTitle="Please enter your Hoarder API token in plugin settings.",
+        Title="No Hoarder Base Address found!",
+        SubTitle="Please enter your Hoarder Base Address in plugin settings.",
         IcoPath=SETTINGS,
         JsonRPCAction=open_setting_dialog()
     )
@@ -16,8 +24,8 @@ def no_base_url_results():
 
 def no_api_token_results():
     return Result(
-        Title="No API token found!",
-        SubTitle="Please enter your Hoarder API token in plugin settings.",
+        Title="No API key found!",
+        SubTitle="Please enter your Hoarder API key in plugin settings.",
         IcoPath=SETTINGS,
         JsonRPCAction=open_setting_dialog()
     )
