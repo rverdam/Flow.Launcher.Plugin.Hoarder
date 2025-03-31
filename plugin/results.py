@@ -1,8 +1,6 @@
-import json
-from multiprocessing import context
 from pyflowlauncher import Result
 from pyflowlauncher.api import open_url, open_setting_dialog, copy_to_clipboard
-from pyflowlauncher.icons import RECYCLEBIN, SETTINGS, LINK, ERROR, COPY
+from pyflowlauncher.icons import SETTINGS, LINK, ERROR, COPY
 from html import unescape
 
 from strip_markdown import strip_markdown
@@ -53,8 +51,9 @@ def query_result(item) -> Result:
             )
          
         case "text":
-            first_line_text = strip_markdown(content.get('text').split('\n')[0])
-            title = f"Note: {first_line_text}"
+            
+            title = item.get("title") if item.get("title") else strip_markdown(content.get('text').split('\n')[0])
+            title = f"Note: {title}"
             json_rpc_action = copy_to_clipboard(content.get("text"))
             context_data = [{
                 "text": content.get("text"),
