@@ -1,5 +1,5 @@
 from pyflowlauncher import Plugin, send_results
-from pyflowlauncher.api import open_url, open_setting_dialog
+from pyflowlauncher.api import open_setting_dialog
 from pyflowlauncher.settings import settings
 from pyflowlauncher.icons import RECYCLEBIN, SETTINGS, LINK
 from requests import HTTPError
