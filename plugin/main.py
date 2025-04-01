@@ -1,10 +1,9 @@
-from pyflowlauncher import Plugin, Result, send_results
-from pyflowlauncher.api import open_url, open_setting_dialog
+from pyflowlauncher import Plugin, send_results
+from pyflowlauncher.api import open_setting_dialog
 from pyflowlauncher.settings import settings
 from pyflowlauncher.icons import RECYCLEBIN, SETTINGS, LINK
 from requests import HTTPError
 
-from lib.urllib3.exceptions import NameResolutionError
 from .hoarder import HoarderAPI
 from results import query_results, context_menu_results, no_api_token_results, no_base_url_results, error_results
 

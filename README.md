@@ -32,15 +32,16 @@ ho Python
 
 ## Features
 
-- **Quick Search**: Instantly search through your Hoarder bookmarks.
-- **Easy Access**: Open bookmarks directly from FlowLauncher.
+- **Quick Search**: Instantly search through your Hoarder bookmarks and notes (only contents).
+- **Easy Access**: Open bookmarks and notes directly from FlowLauncher and copy notes contents.
 - **Context Menu**: Access additional options using the context menu.
 
 ## Context Menu
 
 The plugin provides a context menu option:
 
-- **Copy URL to clipboard**: Copies the URL of the selected item to the clipboard
+- **Copy URL to clipboard**: Copies the URL of the selected item to the clipboard.
+- **Copy Note Text to clipboard**: Copies the content of the note to the clipboard.
 
 ## Development
 

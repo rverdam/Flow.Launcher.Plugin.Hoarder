@@ -18,6 +18,6 @@ class HoarderAPI:
             raise ConnectionError(e)
         
         if response.status_code == 200:
-            return response.json()['bookmarks']
+            return response.json().get('bookmarks')
         else:
             response.raise_for_status()
