@@ -133,9 +133,9 @@ def context_menu_results(data):
         match item.get("action"):
             case "open_url":
                     yield Result(
-                        Title="Open in Hoarder",
-                        SubTitle="Open in Hoarder",
-                        IcoPath=LINK,
+                        Title="Open item in Hoarder",
+                        SubTitle="Open item in Hoarder",
+                        IcoPath='./Images/app.png',
                         JsonRPCAction=open_url(item.get("url"))
                     )
             case "copy_url":
