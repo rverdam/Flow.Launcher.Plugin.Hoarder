@@ -71,7 +71,12 @@ def query_result(item) -> Result:
             context_data = [{
                 "url": content.get("url"),
                 "action": "copy_url"
-            }]
+            },
+            {
+                 "url": f"{settings().get('hoarderBaseAddress')}/dashboard/preview/{item.get('id')}",
+                 "action": "open_url"
+            }
+            ]
             json_rpc_action = open_url(content.get("url"))
             return Result(
                 Title=title, SubTitle=subtitle, IcoPath=icon_path,
@@ -126,6 +131,13 @@ def context_menu_results(data):
 
     for item in data:
         match item.get("action"):
+            case "open_url":
+                    yield Result(
+                        Title="Open in Hoarder",
+                        SubTitle="Open in Hoarder",
+                        IcoPath=LINK,
+                        JsonRPCAction=open_url(item.get("url"))
+                    )
             case "copy_url":
                     yield Result(
                         Title="Copy URL to clipboard",
