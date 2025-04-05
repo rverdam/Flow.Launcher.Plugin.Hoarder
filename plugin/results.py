@@ -88,7 +88,9 @@ def query_result(item) -> Result:
             # an icon path. The json rpc action is a function that will be
             # called when the user clicks on the result.
             url = f"{settings().get('hoarderBaseAddress')}/dashboard/preview/{item.get('id')}"
-            title = item.get("title") if item.get("title") else strip_markdown(content.get('text').split('\n')[0])
+            firstNoteLine = strip_markdown(content.get('text').split('\n')[0])
+            title = item.get("title") if item.get("title") else firstNoteLine
+            subtitle = firstNoteLine
             title = f"Note: {title}"
             json_rpc_action = open_url(url)
             context_data = [{
@@ -97,10 +99,10 @@ def query_result(item) -> Result:
             }]
             return Result(
                 Title=title, CopyText=content.get("text"),
+                SubTitle=subtitle,
                 IcoPath=COPY,
                 ContextData=context_data, JsonRPCAction=json_rpc_action
             )
-
         
 def query_results(hoarder: HoarderAPI, query: str):
     """

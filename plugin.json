@@ -4,7 +4,7 @@
     "Name": "Hoarder",
     "Description": "Hoarder Plugin",
     "Author": "Robert Verdam",
-    "Version": "1.0.2",
+    "Version": "1.0.3",
     "Language": "python",
     "Website": "https://github.com/rverdam/Flow.Launcher.Plugin.Hoarder",
     "IcoPath": "Images\\app.png",
